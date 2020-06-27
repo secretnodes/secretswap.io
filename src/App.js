@@ -480,7 +480,7 @@ class App extends Component {
                   style={{ fontSize: 12, width:"33%"}}
                   onClick={(e) => {
                     e.preventDefault();
-                    let win = window.open('https://build.scrt.network/ledger-nano-s.html', '_blank');
+                    let win = window.open('https://secretnodes.org/#/tutorials/ledger-nano-s?id=use-your-ledger-with-the-secret-network', '_blank');
                     win.focus();
                   }}
                 >
@@ -490,7 +490,7 @@ class App extends Component {
                   style={{ fontSize: 12, width:"33%"}}
                   onClick={(e) => {
                     e.preventDefault();
-                    let win = window.open('https://build.scrt.network/ledger-nano-s.html', '_blank');
+                    let win = window.open('https://secretnodes.org/#/tutorials/ledger-nano-s?id=install-the-secretcli-secret-network-light-client', '_blank');
                     win.focus();
                   }}
                 >
