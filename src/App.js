@@ -463,7 +463,7 @@ class App extends Component {
               Burn ENG for SCRT!
             </Typography>
             <Typography className="span" component="span" variant="span" style={{ marginBottom: 10, fontSize: 10 }}>
-              Disclaimer: Site is currently in Alpha. Updates will be made over time. Please be nice to us.
+              Disclaimer: Site is currently in Alpha. Updates will be made over time. Please be kind!
             </Typography>
             <Box
               fontFamily="h6.fontFamily"
@@ -507,7 +507,7 @@ class App extends Component {
                   Mathwallet*
                 </StyledButton>
                 <Typography className="span" component="span" style={{fontSize: 8, width: "100%"}} align='center'>
-                *Mathwallet support goes live June 29th 2020
+                *Mathwallet support expected to go live June 29th 2020
                 </Typography>
                 <Grid item xs={12}>
                   <FormControlLabel
