@@ -463,7 +463,7 @@ class App extends Component {
               Burn ENG for SCRT!
             </Typography>
             <Typography className="span" component="span" variant="span" style={{ marginBottom: 10, fontSize: 10 }}>
-              Disclaimer: site is currently alpha. Updates will be made over time.
+              Disclaimer: Site is currently in Alpha. Updates will be made over time. Please be nice to us.
             </Typography>
             <Box
               fontFamily="h6.fontFamily"
@@ -597,7 +597,7 @@ class App extends Component {
                   style={{ marginTop: 20, fontSize: 12, width: "100%"}}
                   onClick={(e) => {
                     e.preventDefault();
-                    window.location.href='https://secretnodes.org';
+                    window.location.href='https://secretnodes.org/#/ss';
                   }}
                 >
                   FAQ
