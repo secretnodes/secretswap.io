@@ -354,7 +354,7 @@ class App extends Component {
       )
       .send({
         from: accounts[0],
-        gas: 120000
+        gas: 150000
       })
       .once("transactionHash", function(transactionHash) {
         self.setInfoMessage("Broadcasting 'Burn' transaction");
