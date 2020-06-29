@@ -378,7 +378,7 @@ class App extends Component {
     if (txError.message && txError.message.includes("User denied transaction signature")) {
       this.setErrorMessage("Failed to sign the transaction");
     } else if ("insufficient funds"){
-      this.setErrorMessage("Deposit ETH for gas");
+      this.setErrorMessage("Out of gas or not enough ETH for gas.");
     } else {
       this.setErrorMessage("Swap failed. Check console logs.");
     }
@@ -580,7 +580,6 @@ class App extends Component {
                   </TermsDialog>
                 </Grid>
                 <Grid item xs={12}>
-
                 <div>
                   {loading && (
                     <CircularProgress
@@ -601,6 +600,29 @@ class App extends Component {
                   }}
                 >
                   FAQ
+                </StyledButton>
+                <Typography className="h3" component='h3' variant="h6" align="center" style={{ marginBottom: 10, fontSize: 18, width:"100%"}}>
+                  Explore the Secret Network:
+                </Typography>
+                <StyledButton color="primary"
+                  style={{ fontSize: 12, width:"33%"}}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    let win = window.open('https://puzzle.report/secret/chains/secret-1', '_blank');
+                    win.focus();
+                  }}
+                >
+                  Puzzle
+                </StyledButton>
+                <StyledButton color="primary"
+                  style={{ fontSize: 12, width:"33%"}}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    let win = window.open('https://explorer.cashmaney.com/', '_blank');
+                    win.focus();
+                  }}
+                >
+                  Cashmaney
                 </StyledButton>
                   </div>
                 </Grid>
