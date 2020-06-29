@@ -507,7 +507,7 @@ class App extends Component {
                   Mathwallet*
                 </StyledButton>
                 <Typography className="span" component="span" style={{fontSize: 8, width: "100%"}} align='center'>
-                *Mathwallet support expected to go live June 29th 2020
+                *Mathwallet support expected to go live July 3rd 2020
                 </Typography>
                 <Grid item xs={12}>
                   <FormControlLabel
