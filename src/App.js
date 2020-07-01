@@ -500,15 +500,12 @@ class App extends Component {
                   style={{ fontSize: 12, width:"33%"}}
                   onClick={(e) => {
                     e.preventDefault();
-                    let win = window.open('https://mathwallet.org/en-us/', '_blank');
+                    let win = window.open('https://chrome.google.com/webstore/detail/math-wallet/afbcbjpbpfadlkmhmclhkeeodmamcflc/related?hl=en', '_blank');
                     win.focus();
                   }}
                 >
                   Mathwallet*
                 </StyledButton>
-                <Typography className="span" component="span" style={{fontSize: 8, width: "100%"}} align='center'>
-                *Mathwallet support expected to go live July 3rd 2020
-                </Typography>
                 <Grid item xs={12}>
                   <FormControlLabel
                     control={
