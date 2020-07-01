@@ -504,7 +504,7 @@ class App extends Component {
                     win.focus();
                   }}
                 >
-                  Mathwallet*
+                  Mathwallet
                 </StyledButton>
                 <Grid item xs={12}>
                   <FormControlLabel
