@@ -474,7 +474,7 @@ class App extends Component {
               <form noValidate>
               <Grid container spacing={2}>
                 <Typography className="h3" component='h3' variant="h6" align="center" style={{ marginBottom: 10, fontSize: 18, width:"100%"}}>
-                  Create a SCRT Adddress With:
+                  Create a SCRT Address With:
                 </Typography>
                 <StyledButton color="primary"
                   style={{ fontSize: 12, width:"33%"}}
