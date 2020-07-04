@@ -378,7 +378,7 @@ class App extends Component {
     if (txError.message && txError.message.includes("User denied transaction signature")) {
       this.setErrorMessage("Failed to sign the transaction");
     } else if ("insufficient funds"){
-      this.setErrorMessage("Out of gas or not enough ETH for gas.");
+      this.setErrorMessage("Out of gas⛽️ or contact data disabled on your ledger eth app.");
     } else {
       this.setErrorMessage("Swap failed. Check console logs.");
     }
