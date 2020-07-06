@@ -412,7 +412,7 @@ class App extends Component {
       if (this.state.web3Error) {
         return <div className="App">
           <Typography className="h1" component="h1" variant="h4" style={{ marginTop: 50, marginBottom: 10 }}>
-            You're not connected to Metamask!
+            You're not connected to Metamask! You must have metamask installed and setup in order to use this site.
           </Typography>
           
           {loading && (
