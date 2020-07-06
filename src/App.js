@@ -490,7 +490,7 @@ class App extends Component {
                   style={{ fontSize: 12, width:"33%"}}
                   onClick={(e) => {
                     e.preventDefault();
-                    let win = window.open('https://secretnodes.org/#/tutorials/ledger-nano-s?id=install-the-secretcli-secret-network-light-client', '_blank');
+                    let win = window.open('https://secretnodes.org/#/tutorials/ledger-swap', '_blank');
                     win.focus();
                   }}
                 >
@@ -500,7 +500,7 @@ class App extends Component {
                   style={{ fontSize: 12, width:"33%"}}
                   onClick={(e) => {
                     e.preventDefault();
-                    let win = window.open('https://chrome.google.com/webstore/detail/math-wallet/afbcbjpbpfadlkmhmclhkeeodmamcflc/related?hl=en', '_blank');
+                    let win = window.open('https://blog.scrt.network/secret-network-mathwallet-tutorial/', '_blank');
                     win.focus();
                   }}
                 >
