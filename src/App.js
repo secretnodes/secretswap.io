@@ -463,7 +463,7 @@ class App extends Component {
               Burn ENG for SCRT!
             </Typography>
             <Typography className="span" component="span" variant="span" style={{ marginBottom: 10, fontSize: 10 }}>
-              SITE CURRENTLY UNDER MAINTENCE AS OF 2PM PST JULY 16TH 2020 : ALL FUNDS ARE SAFU AND ANY SWAPS DONE WILL COMPLETE ONCE WE ARE DONE WITH MAINTENCE. THANK YOU FOR YOUR PATIENCE!
+              Disclaimer: Site is currently in Alpha. Updates will be made over time. Please be kind!
             </Typography>
             <Box
               fontFamily="h6.fontFamily"
