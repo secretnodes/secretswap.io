@@ -463,7 +463,7 @@ class App extends Component {
               Burn ENG for SCRT!
             </Typography>
             <Typography className="span" component="span" variant="span" style={{ marginBottom: 10, fontSize: 10 }}>
-              Disclaimer: Site is currently in Alpha. Updates will be made over time. Please be kind! <Link to="Swap Issues">If you have any issues with the swap, please visit this page and reach out.</Link> 
+              Disclaimer: Site is currently in Alpha. Updates will be made over time. Please be kind! <div><Link to="Swap Issues">If you have any issues with the swap, please visit this page and reach out.</Link></div> 
             </Typography>
             <Box
               fontFamily="h6.fontFamily"
