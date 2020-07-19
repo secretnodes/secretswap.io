@@ -463,7 +463,7 @@ class App extends Component {
               Burn ENG for SCRT!
             </Typography>
             <Typography className="span" component="span" variant="span" style={{ marginBottom: 10, fontSize: 10 }}>
-              SITE CURRENTLY UNDER MAINTENCE. THIS IMPACTED SWAPS FROM 5PM PST JULY 18TH 2020 - NOW : ALL FUNDS ARE SAFU AND ANY SWAPS DONE WILL COMPLETE ONCE WE ARE DONE WITH MAINTENCE. THANK YOU FOR YOUR PATIENCE! MAINTENECE IS TO MOVE NODES TO NEW DATACENTER. We will have it back up by 3pm PST July 19th 2020.
+              Disclaimer: Site is currently in Alpha. Updates will be made over time. Please be kind! <Link to="Swap Issues">If you have any issues with the swap, please visit this page and reach out.</Link> 
             </Typography>
             <Box
               fontFamily="h6.fontFamily"
