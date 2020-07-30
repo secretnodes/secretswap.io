@@ -500,11 +500,11 @@ class App extends Component {
                   style={{ fontSize: 12, width:"33%"}}
                   onClick={(e) => {
                     e.preventDefault();
-                    let win = window.open('https://blog.scrt.network/secret-network-mathwallet-tutorial/', '_blank');
+                    let win = window.open('https://wallet.keplr.app/', '_blank');
                     win.focus();
                   }}
                 >
-                  Mathwallet
+                  Keplr
                 </StyledButton>
                 <Grid item xs={12}>
                   <FormControlLabel
