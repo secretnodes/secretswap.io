@@ -490,21 +490,21 @@ class App extends Component {
                   style={{ fontSize: 12, width:"33%"}}
                   onClick={(e) => {
                     e.preventDefault();
-                    let win = window.open('https://secretnodes.org/#/tutorials/ledger-nano-s', '_blank');
+                    let win = window.open('https://wallet.keplr.app', '_blank');
                     win.focus();
                   }}
                 >
-                  Light Client
+                  Keplr (recommended)
                 </StyledButton>
                 <StyledButton color="primary"
                   style={{ fontSize: 12, width:"33%"}}
                   onClick={(e) => {
                     e.preventDefault();
-                    let win = window.open('https://wallet.keplr.app/', '_blank');
+                    let win = window.open('https://blog.scrt.network/secret-network-mathwallet-tutorial/', '_blank');
                     win.focus();
                   }}
                 >
-                  Keplr
+                  Mathwallet
                 </StyledButton>
                 <Grid item xs={12}>
                   <FormControlLabel
