@@ -108,8 +108,7 @@ class App extends Component {
         errors.recipientAddress = "";
         if (!value || !isAddress(value, prefix)) {
           errors.recipientAddress = `Invalid address, expected address starting with "${prefix}" and have 45 character`;
-        }
-        if(isAddress(value, prefix)) {
+        } else {
           try {
             cosmos.address.getBytes32(value, prefix);
             this.setState({
@@ -318,8 +317,6 @@ class App extends Component {
     } = this.state;
 
     const self = this;
-
-    console.log(self.state.recipientAddress);
 
     if(!isAddress(self.state.recipientAddress, prefix)) {
       self.setErrorMessage(`Please enter valid ${prefix} recipient`);
