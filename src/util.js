@@ -8,8 +8,8 @@ var isHexadecimal = function(character) {
     )
 }
 
-function isSecretAddress(address) {
-    if(address.length !== 45 || (address.slice(0,6) !== "secret" && address.slice(0,6) !== "SECRET")) {
+function isAddress(address, prefix="secret") {
+    if(address.length !== 45 || (address.toLowerCase().slice(0,6) !== prefix)) {
         return false;
     }
     if(!isHexadecimal(address.substring(6))) {
@@ -19,5 +19,5 @@ function isSecretAddress(address) {
 }
 
 module.exports = {
-    isSecretAddress,
+    isAddress,
 }

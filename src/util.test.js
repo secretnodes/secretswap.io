@@ -3,7 +3,7 @@ const chai = require('chai');
 
 const assert = chai.assert;
 
-const { isSecretAddress } = require("./util");
+const { isAddress } = require("./util");
 
 var tests = [
     { value: function () {}, is: false},
@@ -23,10 +23,10 @@ var tests = [
 ];
 
 describe('util', function () {
-    describe('isSecretAddress', function () {
+    describe('isAddress', function () {
         tests.forEach(function (test) {
             it('should test if value ' + test.value + ' is address: ' + test.is, function () {
-                assert.equal(isSecretAddress(test.value), test.is);
+                assert.equal(isAddress(test.value), test.is);
             });
         });
     });

@@ -21,7 +21,7 @@ import Box from "./components/Box";
 import Snackbar from "./components/Snackbar";
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-import { isSecretAddress } from "./util";
+import { isAddress } from "./util";
 
 const cosmos = require("cosmos-lib");
 const Web3 = require("web3");
@@ -106,10 +106,10 @@ class App extends Component {
 
       case "recipientAddress":
         errors.recipientAddress = "";
-        if (!value || !isSecretAddress(value)) {
-          errors.recipientAddress = `Invalid address, expected address starting with "${prefix}"`;
+        if (!value || !isAddress(value, prefix)) {
+          errors.recipientAddress = `Invalid address, expected address starting with "${prefix}" and have 45 character`;
         }
-        if(isSecretAddress(value)) {
+        if(isAddress(value, prefix)) {
           try {
             cosmos.address.getBytes32(value, prefix);
             this.setState({
@@ -319,8 +319,10 @@ class App extends Component {
 
     const self = this;
 
-    if(!isSecretAddress(self.state.recipientAddress)) {
-      self.setErrorMessage("Please enter valid secret recipient");
+    console.log(self.state.recipientAddress);
+
+    if(!isAddress(self.state.recipientAddress, prefix)) {
+      self.setErrorMessage(`Please enter valid ${prefix} recipient`);
       return;
     }
 
@@ -420,10 +422,11 @@ class App extends Component {
     if (!this.state.web3) {
       if (this.state.web3Error) {
         return <div className="App">
-          <Typography className="h1" component="h1" variant="h4" style={{ marginTop: 50, marginBottom: 10 }}>
-            You're not connected to Metamask! You must have metamask installed and setup in order to use this site.
-          </Typography>
+          <Typography className="h3" component="h3" variant="h3" style={{ marginTop: 50, marginBottom: 10 }}>
+            You're not connected to Metamask.</Typography>
           
+            <Typography className="h4" component="h4" variant="h4" style={{ marginTop: 50, marginBottom: 10 }}>
+            Please make sure to have <a href="https://metamask.io/" target="new">MetaMask</a> installed and ready to use.</Typography>
           {loading && (
             <CircularProgress
               size={15}
@@ -433,8 +436,9 @@ class App extends Component {
             onClick={this.enableWeb3}
             disabled={loading}
           >
-            <img src="metamask-fox.svg" width="100" height="100" alt="Retry Metamask"/>
-            Connect Metamask
+          <div style={{marginTop: "50px"}}><img src="metamask-fox.svg" width="100" height="100" alt="Retry Metamask"/></div>
+            
+            Click to Connect Metamask
           </Button>
           
           <Snackbar 
@@ -468,10 +472,13 @@ class App extends Component {
         <CssBaseline />
         <ThemeProvider theme={theme}>
           <div className="App">
+          <Typography className="h1" component="h1" variant="h4" style={{ marginTop: 50 }}>
+              SecretSwap.io
+            </Typography>
             <Typography className="h1" component="h1" variant="h4" style={{ marginTop: 50 }}>
               Burn ENG for SCRT!
             </Typography>
-            <Typography className="span" component="span" variant="span" style={{ marginBottom: 10, fontSize: 10 }}>
+            <Typography className="span" component="span" variant="body1" style={{ marginBottom: 10, fontSize: 10 }}>
               Disclaimer: Site is currently in Alpha. Updates will be made over time. Please be kind! If you have any issues with the swap, please visit the following link https://secretnodes.org/#/swap-issues 
             </Typography>
             <Box
@@ -516,6 +523,9 @@ class App extends Component {
                   Mathwallet
                 </StyledButton>
                 <Grid item xs={12}>
+                <Typography className="h3" component='h3' variant="h6" align="center" style={{ marginBottom: 10, fontSize: 18, width:"100%"}}>
+                  Start the Swap:
+                </Typography>
                   <FormControlLabel
                     control={
                       <TextField
@@ -529,11 +539,11 @@ class App extends Component {
                         onChange={this.handleChange}
                       />
                     }
-                    label={this.state.maxSwap}
+                    label={"Total: " + this.state.maxSwap}
                     labelPlacement="bottom"
                   />
                   
-                  <Tooltip title="Swap full ENG balance" aria-label="Swap full ENG balance">
+                  <Tooltip title="Use full ENG balance" aria-label="Use full ENG balance">
                     <IconButton
                         onClick={this.maxSwapAmount}
                         >
@@ -562,10 +572,10 @@ class App extends Component {
                         disabled={!this.hasEng()}
                       />
                     }
-                    label="SCRT (Warning : Only input an address beginning with the secret prefix. Do not input any other type of address.)"
+                    label="Recipient Secret Address"
                     labelPlacement="bottom"
                   />
-                  <Tooltip title="Secret recipient" aria-label="Secret recipient">
+                  <Tooltip title="Secret recipient - Make sure to enter a valid Secret address as recipient, not ETH or ENG address." aria-label="Secret recipient">
                     <IconButton>
                         <HelpOutlineIcon fontSize="small"/>
                     </IconButton>
