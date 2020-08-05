@@ -21,6 +21,8 @@ import Box from "./components/Box";
 import Snackbar from "./components/Snackbar";
 import CircularProgress from '@material-ui/core/CircularProgress';
 
+import { isSecretAddress } from "./util";
+
 const cosmos = require("cosmos-lib");
 const Web3 = require("web3");
 const BigNumber = require('bignumber.js');
@@ -104,16 +106,18 @@ class App extends Component {
 
       case "recipientAddress":
         errors.recipientAddress = "";
-        if (!value || !value.startsWith(prefix)) {
-          errors.recipientAddress = `Invalid prefix, expected ${prefix}`;
+        if (!value || !isSecretAddress(value)) {
+          errors.recipientAddress = `Invalid address, expected address starting with "${prefix}"`;
         }
-        try {
-          cosmos.address.getBytes32(value, prefix);
-          this.setState({
-            recipientAddress: value
-          });
-        } catch (error) {
-          errors.recipientAddress = error.message;
+        if(isSecretAddress(value)) {
+          try {
+            cosmos.address.getBytes32(value, prefix);
+            this.setState({
+              recipientAddress: value
+            });
+          } catch (error) {
+            errors.recipientAddress = error.message;
+          }
         }
         break;
 
