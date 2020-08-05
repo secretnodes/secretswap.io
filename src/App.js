@@ -553,7 +553,7 @@ class App extends Component {
                         disabled={!this.hasEng()}
                       />
                     }
-                    label="SCRT (NOTE: Only input an address beginning with secret)"
+                    label="SCRT (Warning : Only input an address beginning with the secret prefix. Do not input an ethereum address or any other type of address.)"
                     labelPlacement="bottom"
                   />
                   <Tooltip title="Secret recipient" aria-label="Secret recipient">
