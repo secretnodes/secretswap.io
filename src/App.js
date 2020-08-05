@@ -319,6 +319,11 @@ class App extends Component {
 
     const self = this;
 
+    if(!isSecretAddress(self.state.recipientAddress)) {
+      self.setErrorMessage("Please enter valid secret recipient");
+      return;
+    }
+
     const allowance = await tokenContract.methods
       .allowance(accounts[0], contractAddress)
       .call();
