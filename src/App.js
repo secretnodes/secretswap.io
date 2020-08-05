@@ -463,7 +463,7 @@ class App extends Component {
               Burn ENG for SCRT!
             </Typography>
             <Typography className="span" component="span" variant="span" style={{ marginBottom: 10, fontSize: 10 }}>
-              Disclaimer: Site is currently in Alpha. Updates will be made over time. Please be kind! If you have any issues with the swap, please visit the following link https://secretnodes.org/#/swap-issues 
+              Disclaimer: Site is currently in maintenance as of 6:30am PST Aug 5th 2020. We will detail the outage on the followin page once we get back up and running https://secretnodes.org/#/swap-issues 
             </Typography>
             <Box
               fontFamily="h6.fontFamily"
